@@ -1,10 +1,21 @@
-const Card = () =>{
-    return(
-        <div>
-            <p>Estas en Card</p>
-            
+import { Link } from "react-router-dom"
+
+const Card = ({id,name,flags,continents})=>{
+
+    return (
+        <div className={style.card}>
+            <Link to={`/home/${id}`} className={style.nameLink}>
+            <div>
+                <img src={flags} alt={`Flag of ${name}`} className={style.cimage}/>
+            </div>
+
+            <div>
+                <h2>{`${name}`}</h2>
+                <h2>{`${continents}`}</h2>
+            </div>
+            </Link>
         </div>
     )
 }
 
-export default Card;
+export default Card
