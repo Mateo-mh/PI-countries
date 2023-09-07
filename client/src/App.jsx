@@ -1,9 +1,9 @@
-import {Routes,Route,BrowserRouter,useLocation,useNavigate} from "react-router-dom"
+import './App.css'
 import { useEffect } from 'react'
+import {Routes,Route,useLocation,useNavigate} from "react-router-dom"
 import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import { getCountries, getActivities } from './redux/countrySlice';
-import './App.css'
 import Landing from './views/landing/Landing'
 import Home from './views/home/Home'
 import Navbar from './components/navbar/Navbar'
@@ -38,18 +38,16 @@ function App() {
   },[])
 
   return (
-    <BrowserRouter>
       <div>
       {pathname!=='/' ? <Navbar/>:''}
         <Routes>
           <Route path="/" element={<Landing/>}/>
-          <Route exact path="/home" element={<Home/>}/>
-          <Route path="/create" element={<Create/>}/>
-          <Route path="/home/:id" element={<Detail/>}/>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/details/:id" element={<Detail/>}/>
+          <Route path="/activity" element={<Create/>}/>
           <Route path='*' element={<BadRoute/>}/>
         </Routes>
       </div>   
-    </BrowserRouter>
 
   )
 }

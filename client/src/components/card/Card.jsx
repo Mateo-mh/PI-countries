@@ -4,7 +4,7 @@ const Card = ({id,name,flags,continents})=>{
 
     return (
         <div className={style.card}>
-            <Link to={`/home/${id}`} className={style.nameLink}>
+            <Link to={`/details/${id}`} className={style.nameLink}>
             <div>
                 <img src={flags} alt={`Flag of ${name}`} className={style.cimage}/>
             </div>

@@ -129,9 +129,9 @@ const Navbar = ()=>{
                 </div>    
             </div>
 
-            {pathname !=='/create'?
+            {pathname !=='/activity'?
             <div className={style.activity}>
-                <Link to='/create'>
+                <Link to='/activity'>
                     <button className={style.navBarbutton}>Create Activity</button>
                 </Link>
             </div> : null
