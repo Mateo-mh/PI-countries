@@ -1,4 +1,4 @@
-import {Router,BrowserRouter} from "react-router-dom"
+import {Routes,Route,BrowserRouter} from "react-router-dom"
 import './App.css'
 import Landing from './views/landing/Landing'
 import Home from './views/home/Home'
@@ -10,10 +10,12 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Router path="/" component={<Landing/>}/>
-        <Router exact path="/home" component={<Home/>}/>
-        <Router path="/create" component={<Create/>}/>
-        <Router path="/home/:id" component={<Detail/>}/>
+        <Routes>
+          <Route path="/" element={<Landing/>}/>
+          <Route exact path="/home" element={<Home/>}/>
+          <Route path="/create" element={<Create/>}/>
+          <Route path="/home/:id" element={<Detail/>}/>
+        </Routes>
       </div>   
     </BrowserRouter>
 

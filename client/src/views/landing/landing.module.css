@@ -1,0 +1,47 @@
+body{
+    background-image: url('../../assets/mapa.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .background{
+    height: 180px;
+    width: 400px;
+    background-image: url('../../assets/degrade.jpg');
+    margin:250px auto;
+    border-radius: 30px;
+    
+  }
+  
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  
+  .container h1{
+    color: white;
+  }
+  
+  .btn{
+    height: 3.5rem;
+    width: 19rem;
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-family: monospace;
+    border: 1px solid black;
+    border-radius: 10px; 
+  }
+
+  .btn:hover{
+    color: black;
+    background-color: white;
+  }
+  
+  h1{
+    font-size: 40px;
+    font-family: monospace;
+  }
