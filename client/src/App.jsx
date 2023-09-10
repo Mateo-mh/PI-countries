@@ -1,54 +1,34 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-import { useEffect } from 'react'
-import {Routes,Route,useLocation,useNavigate} from "react-router-dom"
-import { useDispatch } from 'react-redux'
-import axios from 'axios'
-import { getCountries, getActivities } from './redux/countrySlice';
-import Landing from './views/landing/Landing'
-import Home from './views/home/Home'
-import Navbar from './components/navbar/Navbar'
-import Create from './views/create/Create'
-import Detail from './views/detail/Detail'
-import BadRoute from './components/badRoute/badRoute'
 
 function App() {
-  const {pathname} = useLocation()
-
-  const dispatch = useDispatch()
-
-  const URL = 'http://localhost:3001/countries'
-
-  const URLA = 'http://localhost:3001/activities'
-
-  useEffect(()=>{
-    const getallCountriesAndActivities= async()=>{
-        try {
-          const {data} = await axios(URL)
-          dispatch(getCountries(data))
-    
-          const res= await axios(URLA)
-          dispatch(getActivities(res.data))
-            
-        }catch (error) {
-          throw error.message
-        }
-    }
-    getallCountriesAndActivities();
-
-  },[])
+  const [count, setCount] = useState(0)
 
   return (
+    <>
       <div>
-      {pathname!=='/' ? <Navbar/>:''}
-        <Routes>
-          <Route path="/" element={<Landing/>}/>
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/details/:id" element={<Detail/>}/>
-          <Route path="/activity" element={<Create/>}/>
-          <Route path='*' element={<BadRoute/>}/>
-        </Routes>
-      </div>   
-
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   )
 }
 
