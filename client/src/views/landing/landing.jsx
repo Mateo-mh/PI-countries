@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 
 import style from './landing.module.css'
 
-const landing = ()=>{
+const Landing = ()=>{
    
     return (        
         <div className={style.background}>
@@ -21,4 +21,4 @@ const landing = ()=>{
     )
 }
 
-export default landing
+export default Landing
