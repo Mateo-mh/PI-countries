@@ -55,21 +55,21 @@ const NavBar = ()=>{
     }
 
     return (
-        <div className={style.navBar}>
+        <div>
             {
                 pathname!=='/home' ?
-                <div className={style.buttons}>
+                <div>
                 <Link to='/home'>
-                    <button  className={style.navBarbutton} >Home</button>
+                    <button >Home</button>
                 </Link>
                 </div> : null
             }
 
-            <div className={style.search}>
+            <div>
                 {pathname==='/home' ? <SearchBar/> : null}
             </div>
 
-            <div className={style.orders}>
+            <div>
                 {
                     pathname==='/home'?
                     <div>
@@ -95,7 +95,7 @@ const NavBar = ()=>{
                 } 
             </div>
 
-            <div className={style.filter}>
+            <div>
                 {
                     pathname==='/home'?
                     <div>
@@ -130,9 +130,9 @@ const NavBar = ()=>{
             </div>
 
             {pathname !=='/activity'?
-            <div className={style.activity}>
+            <div>
                 <Link to='/activity'>
-                    <button className={style.navBarbutton}>Create Activity</button>
+                    <button>Create Activity</button>
                 </Link>
             </div> : null
             } 

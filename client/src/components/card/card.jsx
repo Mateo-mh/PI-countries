@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom"
 
-
 const Card = ({id,name,flags,continents})=>{
 
     return (
-        <div className={style.card}>
-            <Link to={`/details/${id}`} className={style.nameLink}>
+        <div>
+            <Link to={`/details/${id}`}>
             <div>
-                <img src={flags} alt={`Flag of ${name}`} className={style.cimage}/>
+                <img src={flags} alt={`Flag of ${name}`}/>
             </div>
 
             <div>

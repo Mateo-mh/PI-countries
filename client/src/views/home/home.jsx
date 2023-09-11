@@ -4,6 +4,8 @@ import { setCurrentPage } from '../../redux/countrySlice';
 
 import Card from '../../components/card/card'
 
+import style from './home.module.css'
+
 const countriesPerPage = 10
 const visiblePageButtons = 5;
 

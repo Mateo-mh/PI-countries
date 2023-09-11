@@ -12,8 +12,11 @@ body{
     background-image: url('../../assets/degrade.jpg');
     margin:250px auto;
     border-radius: 30px;
-    
-  }
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
   
   .container{
     display: flex;

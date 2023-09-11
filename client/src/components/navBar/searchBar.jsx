@@ -38,7 +38,7 @@ const SearchBar = ()=>{
 
     return (
         <div>
-            <div className={style.search}>
+            <div>
                 <input placeholder="Enter a country's name"  id="input-field" type='search' value={search} onChange={handleChange} className={style.searchInput}/>
                 {
                     error && <p>This name does not match with any country</p>

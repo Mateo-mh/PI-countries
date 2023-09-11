@@ -6,7 +6,9 @@ import axios from 'axios';
 
 import { getCountryById } from '../../redux/countrySlice';
 
-const Detail = ()=>{
+import style from './detail.module.css'
+
+const DetailPage = ()=>{
 
     const {id} = useParams()
 
@@ -54,4 +56,4 @@ const Detail = ()=>{
 }
 
 
-export default Detail
+export default DetailPage

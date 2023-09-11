@@ -100,15 +100,15 @@ const CreateActivity = ()=>{
     }
 
     return (
-        <div className={style.activityForm}>
+        <div>
 
-        <div className={style.form}>
+        <div>
 
         <h1>🏂Activity Creator🏄</h1>
 
         <form onSubmit={handleSubmit}>
             
-            <div className={style.nameInput}>
+            <div>
                 <label htmlFor="name">Name of Activity:</label><br/>
                 <input required="" type="text" name="name" value={activityData.name} onChange={handleChange} className={style.nameInp} />
                 {
@@ -126,7 +126,7 @@ const CreateActivity = ()=>{
             </div>
             <br/>
 
-            <div className={style.dificultySelect}>
+            <div>
                 <select name="dificulty" onChange={handleChange} >
                     <option disabled selected> Dificulties </option>
                     <option value="1">Very Easy</option>
@@ -138,7 +138,7 @@ const CreateActivity = ()=>{
             </div>
             <br/>
 
-            <div className={style.seasonSelect}>
+            <div>
                 <select name="season" onChange={handleChange}>
                     <option disabled selected> Seasons </option>
                     <option value="Summer">🕶️Summer🌞</option>
@@ -149,7 +149,7 @@ const CreateActivity = ()=>{
             </div>
             <br/>
 
-            <div className={style.countrySelect}>
+            <div>
                 <span>Select a Country:</span><br/>
                 <select name="countries" onChange={handleChange}>
                     <option disabled selected >...</option>
@@ -168,7 +168,7 @@ const CreateActivity = ()=>{
 
             {activityData.countries.length?<span className={style.countrySpan}>Click to delete a country:</span>:null}
 
-            <div className={style.countryButtons}>
+            <div>
                 
                 {
                     activityData.countries ? activityData.countries.map((element)=>{
@@ -182,7 +182,7 @@ const CreateActivity = ()=>{
             </div>
             <br/><br/>
 
-            <div className={style.submit}>
+            <div>
                 <button disabled={creating}>Submit Info</button>
             </div>
 
