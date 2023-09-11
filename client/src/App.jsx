@@ -7,12 +7,12 @@ import { useDispatch } from 'react-redux'
 import axios from 'axios'
 
 import { getCountries, getActivities } from './redux/countrySlice';
-import LandingPage from './components/landingPage'
-import HomePage from './components/homePage'
-import DetailPage from './components/detaiPage'
-import NavBar from './components/navBar'
-import ActivityForm from './components/activityForm'
-import BadRoute from './components/badRoute'
+import Landing from './views/landing/landing'
+import Home from './views/home/home'
+import Detail from './views/detail/detail'
+import NavBar from './components/navBar/navBar'
+import CreateActivity from './components/createActivity/createActivity'
+import BadRoute from './components/badRoute/badRoute'
 
 function App() {
   
@@ -47,10 +47,10 @@ function App() {
       {pathname!=='/' ? <NavBar/>:''}
 
       <Routes>
-        <Route path='/' element={<LandingPage/>}/>
-        <Route path='/home' element={<HomePage/>}/>
-        <Route path='/details/:id' element={<DetailPage/>}/>
-        <Route path='/activity' element={<ActivityForm/>}/>
+        <Route path='/' element={<Landing/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/details/:id' element={<Detail/>}/>
+        <Route path='/activity' element={<CreateActivity/>}/>
         <Route path='*' element={<BadRoute/>}/>
       </Routes>
 
