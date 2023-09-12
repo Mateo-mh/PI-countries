@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import axios from 'axios';
 
 import { getCountryByName } from '../../redux/countrySlice'
+import style from './searchBar.module.css'
 
 const SearchBar = ()=>{
     const URL = 'http://localhost:3001/countries'
@@ -38,7 +39,7 @@ const SearchBar = ()=>{
 
     return (
         <div>
-            <div>
+            <div className={style.search}>
                 <input placeholder="Enter a country's name"  id="input-field" type='search' value={search} onChange={handleChange} className={style.searchInput}/>
                 {
                     error && <p>This name does not match with any country</p>

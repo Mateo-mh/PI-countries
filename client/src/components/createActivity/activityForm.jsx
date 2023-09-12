@@ -5,8 +5,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import axios from "axios";
 
 import { getActivities, postActivity} from '../../redux/countrySlice';
+import style from './activityForm.module.css'
 
-const CreateActivity = ()=>{
+const ActivityForm = ()=>{
 
     const navigate = useNavigate()
 
@@ -100,15 +101,15 @@ const CreateActivity = ()=>{
     }
 
     return (
-        <div>
+        <div className={style.activityForm}>
 
-        <div>
+        <div className={style.form}>
 
         <h1>🏂Activity Creator🏄</h1>
 
         <form onSubmit={handleSubmit}>
             
-            <div>
+            <div className={style.nameInput}>
                 <label htmlFor="name">Name of Activity:</label><br/>
                 <input required="" type="text" name="name" value={activityData.name} onChange={handleChange} className={style.nameInp} />
                 {
@@ -126,7 +127,7 @@ const CreateActivity = ()=>{
             </div>
             <br/>
 
-            <div>
+            <div className={style.dificultySelect}>
                 <select name="dificulty" onChange={handleChange} >
                     <option disabled selected> Dificulties </option>
                     <option value="1">Very Easy</option>
@@ -138,7 +139,7 @@ const CreateActivity = ()=>{
             </div>
             <br/>
 
-            <div>
+            <div className={style.seasonSelect}>
                 <select name="season" onChange={handleChange}>
                     <option disabled selected> Seasons </option>
                     <option value="Summer">🕶️Summer🌞</option>
@@ -149,7 +150,7 @@ const CreateActivity = ()=>{
             </div>
             <br/>
 
-            <div>
+            <div className={style.countrySelect}>
                 <span>Select a Country:</span><br/>
                 <select name="countries" onChange={handleChange}>
                     <option disabled selected >...</option>
@@ -168,7 +169,7 @@ const CreateActivity = ()=>{
 
             {activityData.countries.length?<span className={style.countrySpan}>Click to delete a country:</span>:null}
 
-            <div>
+            <div className={style.countryButtons}>
                 
                 {
                     activityData.countries ? activityData.countries.map((element)=>{
@@ -182,7 +183,7 @@ const CreateActivity = ()=>{
             </div>
             <br/><br/>
 
-            <div>
+            <div className={style.submit}>
                 <button disabled={creating}>Submit Info</button>
             </div>
 
@@ -194,4 +195,4 @@ const CreateActivity = ()=>{
 
 }
 
-export default CreateActivity
+export default ActivityForm

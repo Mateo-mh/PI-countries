@@ -2,14 +2,13 @@ import React, { useState,useEffect } from 'react';
 import {  useSelector, useDispatch } from 'react-redux';
 import { setCurrentPage } from '../../redux/countrySlice';
 
-import Card from '../../components/card/card'
-
-import style from './home.module.css'
+import CountryCard from '../../components/card/countryCard'
+import style from './homePage.module.css'
 
 const countriesPerPage = 10
 const visiblePageButtons = 5;
 
-const Home = ()=>{
+const HomePage = ()=>{
     const dispatch = useDispatch();
 
     const allcountries = useSelector(state=>state.country.allCountries)
@@ -60,7 +59,7 @@ const Home = ()=>{
                     allcountries.slice(0 + (currentPage * countriesPerPage), countriesPerPage + (currentPage * countriesPerPage)).map(({id,name,continents,flags})=>{
                         return(
                             <>
-                                <Card
+                                <CountryCard
                                     id={id}
                                     key={id+' '+name}
                                     name={name}
@@ -76,4 +75,4 @@ const Home = ()=>{
     )
 }
 
-export default Home
+export default HomePage

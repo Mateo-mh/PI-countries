@@ -5,6 +5,7 @@ import axios from 'axios'
 
 import {getCountries, orderByAtoZ, orderByPopulation, filterByContinent, filterByActivity, setCurrentPage} from '../../redux/countrySlice'
 import SearchBar from "./searchBar";
+import style from './navBar.module.css'
 
 const NavBar = ()=>{
 
@@ -55,21 +56,21 @@ const NavBar = ()=>{
     }
 
     return (
-        <div>
+        <div className={style.navBar}>
             {
                 pathname!=='/home' ?
-                <div>
+                <div className={style.buttons}>
                 <Link to='/home'>
-                    <button >Home</button>
+                    <button  className={style.navBarbutton} >Home</button>
                 </Link>
                 </div> : null
             }
 
-            <div>
+            <div className={style.search}>
                 {pathname==='/home' ? <SearchBar/> : null}
             </div>
 
-            <div>
+            <div className={style.orders}>
                 {
                     pathname==='/home'?
                     <div>
@@ -95,7 +96,7 @@ const NavBar = ()=>{
                 } 
             </div>
 
-            <div>
+            <div className={style.filter}>
                 {
                     pathname==='/home'?
                     <div>
@@ -130,9 +131,9 @@ const NavBar = ()=>{
             </div>
 
             {pathname !=='/activity'?
-            <div>
+            <div className={style.activity}>
                 <Link to='/activity'>
-                    <button>Create Activity</button>
+                    <button className={style.navBarbutton}>Create Activity</button>
                 </Link>
             </div> : null
             } 

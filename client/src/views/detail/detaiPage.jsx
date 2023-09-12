@@ -5,8 +5,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
 
 import { getCountryById } from '../../redux/countrySlice';
-
-import style from './detail.module.css'
+import style from './detailPage.module.css'
 
 const DetailPage = ()=>{
 
