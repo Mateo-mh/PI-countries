@@ -1,5 +1,6 @@
 .activityForm{
-    max-width: 60%;
+    max-width: 95%;
+    height: 520px;
     background-color: rgba(0, 0, 0, 0.816);
     display: flex;
     justify-content: center;
@@ -8,6 +9,13 @@
     margin: 5px auto;
     border-radius: 30px;
     padding: 1em;
+}
+
+#title,
+#name{
+    display: flex;
+    position: relative;
+    top: 40px;
 }
 
 .activityForm h1{
@@ -128,6 +136,8 @@
 .countrySpan{
     margin-bottom: 5px;
     display: flex;
+    position: relative;
+    top: -10px;
     flex-direction: column;
     align-items: center;
     color: azure;
@@ -139,6 +149,8 @@
 .countryButtons{
     max-width: 75%;
     display: flex;
+    position: relative;
+    top: -11px;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
@@ -156,11 +168,18 @@
     border: 0;
 }
 
+.countryButtons button:hover{
+    background-color: white;
+    color: #ff631b;
+    box-shadow: 4px 4px #ff631b;
+}
 
 .submit{
     display: flex;
-    flex-direction: column;
+    position: relative;
     align-items: center;
+    justify-content: center;
+    top: -48px;
 }
 
 .submit button{
@@ -172,3 +191,8 @@
     border: 0;
 }
 
+.submit button:hover{
+    background-color: white;
+    color: #ff631b;
+    box-shadow: 4px 4px #ff631b;
+}

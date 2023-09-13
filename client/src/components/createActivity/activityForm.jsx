@@ -105,12 +105,12 @@ const ActivityForm = ()=>{
 
         <div className={style.form}>
 
-        <h1>🏂Activity Creator🏄</h1>
+        <h1 id={style.title}>🏂Activity Creator🏄</h1>
 
         <form onSubmit={handleSubmit}>
             
             <div className={style.nameInput}>
-                <label htmlFor="name">Name of Activity:</label><br/>
+                <label htmlFor="name" id={style.name}>Name of Activity:</label><br/>
                 <input required="" type="text" name="name" value={activityData.name} onChange={handleChange} className={style.nameInp} />
                 {
                     error.name ? <p>{error.name}</p> : null

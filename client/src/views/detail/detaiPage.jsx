@@ -42,12 +42,12 @@ const DetailPage = ()=>{
                 <img src={country.flags} alt={country.name} className={style.flag}/><br/>
             </div>         
             <div className={style.countryInfo}>            
-                <h1>{`${country.name} ( ${country.id} )`}</h1>
-                <h2>{`Area: ${country.area} Km²`}</h2>
-                <h2>{`Population: ${country.population}`}</h2>
-                <h2>{`Continent: ${country.continents}`}</h2>
-                <h2>{`Sub Region: ${country.subregion}`}</h2>
-                <h2>{`Capital: ${country.capital}`}</h2>
+                <h1 className={style.pfo1}>{`${country.name} ( ${country.id} )`}</h1>
+                <h2 className={style.pfo}>{`Area: ${country.area} Km²`}</h2>
+                <h2 className={style.pfo}>{`Population: ${country.population}`}</h2>
+                <h2 className={style.pfo}>{`Continent: ${country.continents}`}</h2>
+                <h2 className={style.pfo}>{`Sub Region: ${country.subregion}`}</h2>
+                <h2 className={style.pfo}>{`Capital: ${country.capital}`}</h2>
             </div>
             
         </div>

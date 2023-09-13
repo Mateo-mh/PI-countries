@@ -6,12 +6,12 @@
     flex-wrap: wrap;
     gap: 5px;
     justify-content: space-evenly;
-    background-color: #ffd7ab;
+    background-color: transparent;
     border-radius: 15px;
     margin-top: 12px;
   }
   
-  .buttons,
+
   .search,
   .orders,
   .filter,
@@ -21,7 +21,16 @@
     gap: 8px; /* Espacio entre elementos */
     padding: 0.5rem; /* Añade espacio alrededor de cada grupo de elementos */
   }
-  
+
+  .buttons{
+    display: flex;
+    position: absolute;
+    top: 8.9rem;
+    left: 370px;
+    gap: 5px; 
+    padding: 0.5rem;
+  }
+
   .orders select,
   .filter select {
     font-family: monospace;
