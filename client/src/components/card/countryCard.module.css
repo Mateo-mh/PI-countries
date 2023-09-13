@@ -1,15 +1,56 @@
- .card{
+.card {
+    position: relative;
+    width: 245px;
+    height: 135px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center; 
-    max-width: 15rem;
-    min-height: 16rem;
-    margin-top: 1rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    border-radius: 2rem;
-    background-color: rgba(0, 0, 0, 0.816);
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card img {
+    width: 94.8%;
+    height: 93%;
+    object-fit: cover;
+    position: absolute;
+    top: 3%;
+    left: 2.3%;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1;
+    border-radius: 10px;
 }
+
+  .card .card_text {
+    position: relative;
+    z-index: 2;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  h2{
+    color: #ff631b;
+  }
+  .card:hover .card_text {
+    opacity: 1;
+  }
+  
+  .card:hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: #ffd7ab;
+    -webkit-transform: rotate(-5deg) scale(1.1);
+    -moz-transform: rotate(-5deg) scale(1.1);
+    -ms-transform: rotate(-5deg) scale(1.1);
+    -o-transform: rotate(-5deg) scale(1.1);
+}
+  
+  .card:hover img {
+    scale: 0;
+    transform: rotate(-45deg);
+  }
 
 .loading{
     font-family: monospace;
@@ -20,24 +61,8 @@
     justify-content: center;
 }
 
-.card h2{
-    font-family: monospace;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    margin: 0.5em;
-    color: rgb(209, 233, 255);
-}
 
 .nameLink{
     text-decoration: none;
-}
-
-.cimage{
-    margin: 0.5rem;
-    border-radius: 30px;
-    width: 15rem;
 } 
 

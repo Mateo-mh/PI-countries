@@ -5,7 +5,7 @@ import { setCurrentPage } from '../../redux/countrySlice';
 import CountryCard from '../../components/card/countryCard'
 import style from './homePage.module.css'
 
-const countriesPerPage = 10
+const countriesPerPage = 12
 const visiblePageButtons = 5;
 
 const HomePage = ()=>{
