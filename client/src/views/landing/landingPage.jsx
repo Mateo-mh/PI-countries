@@ -5,18 +5,18 @@ import style from './landingPage.module.css'
 const LandingPage = ()=>{
    
     return (        
-        <div className={style.background}>
-
-            <div className={style.leboton}>
-                <h1 className={style.c4u}>Countries</h1>
-            
+        <div className={style.card}>
+            <div className={style.bg}>
+                <h1>Countries</h1>
                 <Link to='/home' className={style.link}>
                     <div>
-                        <button className={style.lpbtn}><span className={style.start}>¡Lets get Started✈️!</span></button>
+                        <button className={style.button}>¡Lets get Started!</button>
                     </div>   
-                </Link>    
+                </Link>
             </div>
+                <div className={style.blob}></div>
         </div>
+
         
     )
 }
