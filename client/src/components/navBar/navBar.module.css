@@ -1,73 +1,58 @@
-.navBar{
+.navBar {
     z-index: 999;
-    padding-top: 1rem;
-    padding-bottom: 1rem;   
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.816);
+    background-color: #ffd7ab;
     border-radius: 15px;
-}
-
-.buttons{
-    padding-top: 1rem;
-    padding-bottom: 1rem; 
+  }
+  
+  .buttons,
+  .search,
+  .orders,
+  .filter,
+  .activity {
     display: flex;
-    justify-content: space-around;
-}
-
-.search{
-    padding-top: 0.95rem;
-    
-    padding-bottom: 1rem; 
-    display: flex;
-    justify-content: space-around;
-}
-
-.orders{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.orders select{
+    align-items: center;
+    gap: 8px; /* Espacio entre elementos */
+    padding: 0.5rem; /* Añade espacio alrededor de cada grupo de elementos */
+  }
+  
+  .orders select,
+  .filter select {
     font-family: monospace;
     text-align: center;
     width: 150px;
     padding: 3px;
     border-radius: 30px;
     appearance: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    background-color: black;
+    color: white;
 }
-
-.filter{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.filter select{
-    font-family: monospace;
-    text-align: center;
-    width: 170;
-    padding: 3px;
-    border-radius: 30px; 
-    appearance: none;
-}
-
-.activity{
-    padding-top: 1rem;
-    padding-bottom: 1rem; 
-    display: flex;
-    justify-content: space-around;
-}
-
-.navBarbutton{
+  
+  .filter select {
+    width: 170px;
+  }
+  
+  .navBarbutton {
     font-family: monospace;
     font-size: 1rem;
-    background-color: rgba(49, 186, 245, 0.811);
+    background-color: #ff631b;
     border-radius: 30px;
     border: 0;
     padding: 2.5px 12.5px 2.5px 12.5px;
-    box-shadow:2px -2px rgb(1, 9, 9) ;
-}
+    box-shadow: 2px -2px white;
+  }
+  
+  .navBarbutton:hover{
+    background-color: white;
+    color: #ff631b;
+    box-shadow: 2px -2px #ff631b;
+  }
